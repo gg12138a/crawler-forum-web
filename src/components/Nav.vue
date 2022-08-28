@@ -36,14 +36,14 @@
         <span class="hamb-bottom"></span>
       </button>
       <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
+<!--        <div class="row">-->
+<!--          <div class="col-lg-8 col-lg-offset-2">-->
 
             <!--主要内容-->
             <router-view></router-view>
 
-          </div>
-        </div>
+<!--          </div>-->
+<!--        </div>-->
       </div>
     </div>
     <!-- /#page-content-wrapper -->

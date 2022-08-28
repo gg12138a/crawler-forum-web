@@ -1,9 +1,9 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 
-import Home from '@/components/Home'
-import Notice from '@/components/Notice'
-import Summary from "@/components/Summary";
+import Home from '@/components/nav/Home'
+import Notice from '@/components/nav/Notice'
+import Summary from "@/components/nav/Summary";
 
 
 Vue.use(VueRouter)
