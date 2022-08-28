@@ -13,6 +13,9 @@ window.$ = $;
 import axios from 'axios';
 Vue.prototype.$axios = axios
 
+import echarts from "echarts";
+Vue.prototype.$echarts = echarts;
+
 
 new Vue({
     render: h => h(App),

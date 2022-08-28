@@ -111,7 +111,6 @@ export default {
           .get('http://localhost:8082/notice/' + page)
           .then(response => {
             this.pageinfo = response.data
-            console.log(this.pageinfo)
           })
           .catch(function (err) {
             console.log(err)
