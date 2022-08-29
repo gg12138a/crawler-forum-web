@@ -21,6 +21,28 @@
             </li>
           </ul>
         </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-plus"></i> 原始数据展示
+            <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li>
+              <router-link to="/notice" @click.native="hamburger_cross">热门帖子</router-link>
+            </li>
+            <li>
+              <router-link to="/summary" @click.native="hamburger_cross">主题分布</router-link>
+            </li>
+            <li>
+              <router-link to="/notice" @click.native="hamburger_cross">主题分布（筛选）</router-link>
+            </li>
+            <li>
+              <router-link to="/notice" @click.native="hamburger_cross">类别分布与受理情况</router-link>
+            </li>
+            <li>
+              <router-link to="/notice" @click.native="hamburger_cross">查看词云图</router-link>
+            </li>
+          </ul>
+        </li>
+
       </ul>
     </nav>
     <!-- /#sidebar-wrapper -->

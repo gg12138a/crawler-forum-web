@@ -32,7 +32,7 @@
     <!-- 分页条 -->
     <div class="row">
       <div class="col-lg-5 col-lg-offset-2">
-        当前{{ pageinfo.pageNum }}页，总{{ pageinfo.pages }}页，共{{ pageinfo.total }}条记录
+        当前为第{{ pageinfo.pageNum }}页，总{{ pageinfo.pages }}页，共{{ pageinfo.total }}条记录
       </div>
       <div class="col-lg-5 col-lg-offset-1">
         <nav aria-label="Page navigation">
@@ -108,9 +108,14 @@ export default {
   methods: {
     send(page) {
       this.$axios
-          .get('http://localhost:8082/notice/' + page)
-          .then(response => {
-            this.pageinfo = response.data
+          .get('http://localhost:8082/notice/' + page, {
+            headers: {
+              'Content-Type': "application/json;charser=UTF-8",
+              'token': this.$store.state.token
+            }
+          })
+          .then(res => {
+            this.pageinfo = res.data
           })
           .catch(function (err) {
             console.log(err)
