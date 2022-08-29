@@ -2,22 +2,44 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 
 import Home from '@/components/nav/Home'
-import Notice from '@/components/nav/Notice'
-import Summary from "@/components/nav/Summary";
+import DeptNotice from '@/components/nav/dept/DeptNotice'
+import DeptSummary from "@/components/nav/dept/DeptSummary";
 import Login from "@/components/Login";
 import Nav from "@/components/Nav";
-
+import RawtNotice from "@/components/nav/raw/RawtNotice";
+import RawSummary from "@/components/nav/raw/RawSummary";
 
 Vue.use(VueRouter)
 
 const router = new VueRouter({
     routes: [
-        {path: '/', redirect: '/login'},
-        {path: '/login', component: Login},
-        {path: '/nav', component: Nav},
-        {path: '/home', component: Home, meta: {auth: true}},
-        {path: '/notice', component: Notice, meta: {auth: true}},
-        {path: '/summary', component: Summary, meta: {auth: true}}
+        {
+            path: '/', redirect: '/login'
+        },
+        {
+            path: '/login', component: Login
+        },
+        {
+            path: '/nav', component: Nav, meta: {auth: true}, children: [
+                {
+                    path: 'home', component: Home
+                },
+                {
+                    path: 'dept', component: {render: (e) => e("router-view")},
+                    children: [
+                        {path: 'notice', component: DeptNotice},
+                        {path: 'summary', component: DeptSummary},
+                    ]
+                },
+                {
+                    path: 'raw', component: {render: (e) => e("router-view")},
+                    children: [
+                        {path: 'notice', component: RawtNotice},
+                        {path: 'summary', component: RawSummary},
+                    ]
+                }
+            ]
+        },
     ]
 })
 

@@ -6,6 +6,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
     state: {
         token: localStorage.getItem('token') ? localStorage.getItem('token') : null,
+        deptName: localStorage.getItem('deptName') ? localStorage.getItem('deptName') : null,
     },
     mutations: {
         setToken(state, token) {
@@ -15,6 +16,10 @@ export default new Vuex.Store({
         logout(state) {
             localStorage.removeItem('token')
             state.token = null
+        },
+        setDeptName(state, deptName) {
+            localStorage.setItem('deptName', deptName)
+            state.deptName = deptName
         }
     },
 })

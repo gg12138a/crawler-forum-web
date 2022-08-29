@@ -7,17 +7,18 @@
       <ul class="nav sidebar-nav">
 
         <li>
-          <router-link to="/home" @click.native="hamburger_cross"><i class="fa fa-fw fa-home"></i> Home</router-link>
+          <router-link to="/nav/home" @click.native="hamburger_cross"><i class="fa fa-fw fa-home"></i> Home</router-link>
         </li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-plus"></i> 部门数据展示
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-plus"></i>
+            {{ this.deptName }}-部门数据展示
             <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <li>
-              <router-link to="/notice" @click.native="hamburger_cross">消息通知</router-link>
+              <router-link to="/nav/dept/notice" @click.native="hamburger_cross">消息通知</router-link>
             </li>
             <li>
-              <router-link to="/summary" @click.native="hamburger_cross">工作总结</router-link>
+              <router-link to="/nav/dept/summary" @click.native="hamburger_cross">工作总结</router-link>
             </li>
           </ul>
         </li>
@@ -26,19 +27,22 @@
             <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <li>
-              <router-link to="/notice" @click.native="hamburger_cross">热门帖子</router-link>
+              <router-link to="/nav/raw/notice" @click.native="hamburger_cross">热门帖子</router-link>
             </li>
             <li>
-              <router-link to="/summary" @click.native="hamburger_cross">主题分布</router-link>
+              <router-link to="/nav/raw/summary" @click.native="hamburger_cross">全部部门工作总结</router-link>
             </li>
             <li>
-              <router-link to="/notice" @click.native="hamburger_cross">主题分布（筛选）</router-link>
+              <router-link to="/nav/raw/summary" @click.native="hamburger_cross">主题分布</router-link>
             </li>
             <li>
-              <router-link to="/notice" @click.native="hamburger_cross">类别分布与受理情况</router-link>
+              <router-link to="/nav/raw/summary" @click.native="hamburger_cross">主题分布（筛选）</router-link>
             </li>
             <li>
-              <router-link to="/notice" @click.native="hamburger_cross">查看词云图</router-link>
+              <router-link to="/nav/raw/summary" @click.native="hamburger_cross">类别分布与受理情况</router-link>
+            </li>
+            <li>
+              <router-link to="/nav/raw/summary" @click.native="hamburger_cross">查看词云图</router-link>
             </li>
           </ul>
         </li>
@@ -58,14 +62,14 @@
         <span class="hamb-bottom"></span>
       </button>
       <div class="container">
-<!--        <div class="row">-->
-<!--          <div class="col-lg-8 col-lg-offset-2">-->
+        <!--        <div class="row">-->
+        <!--          <div class="col-lg-8 col-lg-offset-2">-->
 
-            <!--主要内容-->
-            <router-view></router-view>
+        <!--主要内容-->
+        <router-view></router-view>
 
-<!--          </div>-->
-<!--        </div>-->
+        <!--          </div>-->
+        <!--        </div>-->
       </div>
     </div>
     <!-- /#page-content-wrapper -->
@@ -77,6 +81,7 @@
 
 <script>
 import 'bootstrap/dist/js/bootstrap.min.js'
+import {mapState} from "vuex";
 
 export default {
   name: 'Nav',
@@ -89,6 +94,9 @@ export default {
     hamburger_cross() {
       this.isClosed = !this.isClosed
     }
+  },
+  computed: {
+    ...mapState(["deptName"])
   }
 }
 

@@ -20,7 +20,7 @@ export default {
     })
 
     this.$axios
-        .get('http://localhost:8082/summary')
+        .get('http://localhost:8082/raw/summary')
         .then(response => {
           let data = response.data
           let labelArr = []

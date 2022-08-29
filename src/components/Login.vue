@@ -60,6 +60,7 @@ export default {
 
         if (res.data.code === '200') {
           this.$store.commit('setToken', res.data.data.token)
+          this.$store.commit('setDeptName', res.data.data.deptName)
           this.$router.push('/nav')
         } else {
           alert(res.data.message)

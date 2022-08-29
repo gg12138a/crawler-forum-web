@@ -108,7 +108,7 @@ export default {
   methods: {
     send(page) {
       this.$axios
-          .get('http://localhost:8082/notice/' + page, {
+          .get('http://localhost:8082/raw/notice/' + page, {
             headers: {
               'Content-Type': "application/json;charser=UTF-8",
               'token': this.$store.state.token
