@@ -8,6 +8,7 @@ import Login from "@/components/Login";
 import Nav from "@/components/Nav";
 import RawtNotice from "@/components/nav/raw/RawtNotice";
 import RawSummary from "@/components/nav/raw/RawSummary";
+import DeptMention from "@/components/nav/raw/DeptMention";
 
 Vue.use(VueRouter)
 
@@ -36,6 +37,7 @@ const router = new VueRouter({
                     children: [
                         {path: 'notice', component: RawtNotice},
                         {path: 'summary', component: RawSummary},
+                        {path: 'mention',component: DeptMention}
                     ]
                 }
             ]
