@@ -42,7 +42,7 @@
               <router-link to="/nav/raw/summary" @click.native="hamburger_cross">类别分布与受理情况</router-link>
             </li>
             <li>
-              <router-link to="/nav/raw/summary" @click.native="hamburger_cross">查看词云图</router-link>
+              <router-link to="/nav/raw/wordCloud" @click.native="hamburger_cross">查看词云图</router-link>
             </li>
           </ul>
         </li>
