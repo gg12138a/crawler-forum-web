@@ -11,6 +11,8 @@
 </template>
 
 <script>
+import {mapState} from "vuex";
+
 export default {
   name: 'Summary',
   mounted() {
@@ -35,7 +37,7 @@ export default {
           // 指定图表的配置项和数据
           let option = {
             title: {
-              text: '历史总结',
+              text: this.deptName + '部门-历史总结',
               // subtext: 'Fake Data',
               left: 'center'
             },
@@ -84,6 +86,9 @@ export default {
         .catch(function (err) {
           console.log(err)
         })
+  },
+  computed: {
+    ...mapState(["deptName"])
   }
 }
 </script>

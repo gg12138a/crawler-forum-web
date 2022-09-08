@@ -2,13 +2,13 @@
   <div>
     <div class="row">
       <div class="col-lg-10 col-lg-offset-1">
-        <h1 class="page-header">消息通知</h1>
+        <h1 class="page-header">{{ deptName }}部门-消息通知</h1>
         <table class="table table-hover table-striped">
           <thead>
           <tr>
             <th>标题</th>
             <th>类别</th>
-<!--            <th>相关部门</th>-->
+            <!--            <th>相关部门</th>-->
             <th>查看数</th>
             <th>回复数</th>
             <th>发布者</th>
@@ -19,7 +19,7 @@
           <tr v-for="post in this.pageinfo.list">
             <td><a :href="'http://bbs.zhoushan.cn/thread-'+post.postId+'-1-1.html'">{{ post.title }}</a></td>
             <td>{{ post.typeName }}</td>
-<!--            <td>{{ post.deptName }}</td>-->
+            <!--            <td>{{ post.deptName }}</td>-->
             <td>{{ post.checkCount }}</td>
             <td>{{ post.replyCount }}</td>
             <td>{{ post.publisherName }}</td>
@@ -81,6 +81,8 @@
 </template>
 
 <script>
+import {mapState} from "vuex";
+
 export default {
   name: 'Notice',
   data() {
@@ -124,6 +126,9 @@ export default {
   },
   mounted() {
     this.send(1)
+  },
+  computed: {
+    ...mapState(["deptName"])
   }
 }
 </script>

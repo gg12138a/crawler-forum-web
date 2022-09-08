@@ -10,6 +10,7 @@ import RawtNotice from "@/components/nav/raw/RawtNotice";
 import RawSummary from "@/components/nav/raw/RawSummary";
 import DeptMention from "@/components/nav/raw/DeptMention";
 import WordCloud from "@/components/nav/raw/WordCloud";
+import TypeClassify from "@/components/nav/raw/TypeClassify";
 
 Vue.use(VueRouter)
 
@@ -39,6 +40,7 @@ const router = new VueRouter({
                         {path: 'notice', component: RawtNotice},
                         {path: 'summary', component: RawSummary},
                         {path: 'mention', component: DeptMention},
+                        {path: 'classify', component: TypeClassify},
                         {
                             path: 'wordCloud',
                             component: WordCloud,

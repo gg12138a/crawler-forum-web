@@ -18,7 +18,7 @@
               <router-link to="/nav/dept/notice" @click.native="hamburger_cross">消息通知</router-link>
             </li>
             <li>
-              <router-link to="/nav/dept/summary" @click.native="hamburger_cross">工作总结</router-link>
+              <router-link to="/nav/dept/summary" @click.native="hamburger_cross">事务处理进度总结</router-link>
             </li>
           </ul>
         </li>
@@ -30,16 +30,13 @@
               <router-link to="/nav/raw/notice" @click.native="hamburger_cross">热门帖子</router-link>
             </li>
             <li>
-              <router-link to="/nav/raw/summary" @click.native="hamburger_cross">事务处理总结</router-link>
+              <router-link to="/nav/raw/summary" @click.native="hamburger_cross">事务处理进度总结</router-link>
             </li>
             <li>
               <router-link to="/nav/raw/mention" @click.native="hamburger_cross">部门提及次数</router-link>
             </li>
             <li>
-              <router-link to="/nav/raw/summary" @click.native="hamburger_cross">主题分布（筛选）</router-link>
-            </li>
-            <li>
-              <router-link to="/nav/raw/summary" @click.native="hamburger_cross">类别分布与受理情况</router-link>
+              <router-link to="/nav/raw/classify" @click.native="hamburger_cross">帖子类别分布</router-link>
             </li>
             <li>
               <router-link to="/nav/raw/wordCloud" @click.native="hamburger_cross">查看词云图</router-link>

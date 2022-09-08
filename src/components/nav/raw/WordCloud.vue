@@ -64,7 +64,7 @@ export default {
         this.$axios
             .get(this.requestUrl, {
               headers: {
-                'Content-Type': "application/json;charser=UTF-8",
+                'Content-Type': "application/json;charset=UTF-8",
                 'token': this.$store.state.token
               },
               params: {
