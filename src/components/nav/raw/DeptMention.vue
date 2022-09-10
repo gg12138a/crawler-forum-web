@@ -1,8 +1,10 @@
 <template>
-  <div class="row">
-    <div class="col-lg-6 ">
-      <div ref="chart">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 ">
+        <div ref="chart">
 
+        </div>
       </div>
     </div>
   </div>

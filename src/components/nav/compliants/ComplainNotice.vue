@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <div class="row">
       <div class="col-lg-10 col-lg-offset-1">
         <h1 class="page-header">投诉主题-消息通知</h1>

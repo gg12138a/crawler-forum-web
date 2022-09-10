@@ -77,16 +77,16 @@
         <span class="hamb-middle"></span>
         <span class="hamb-bottom"></span>
       </button>
-      <div class="container">
+<!--      <div class="container">-->
         <!--        <div class="row">-->
         <!--          <div class="col-lg-8 col-lg-offset-2">-->
 
         <!--主要内容-->
-        <router-view></router-view>
+        <router-view ></router-view>
 
         <!--          </div>-->
         <!--        </div>-->
-      </div>
+<!--      </div>-->
     </div>
     <!-- /#page-content-wrapper -->
 
@@ -103,7 +103,7 @@ export default {
   name: 'Nav',
   data() {
     return {
-      isClosed: true
+      isClosed: true,
     }
   },
   methods: {
@@ -113,7 +113,7 @@ export default {
   },
   computed: {
     ...mapState(["deptName"])
-  }
+  },
 }
 
 </script>

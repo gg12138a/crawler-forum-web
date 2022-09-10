@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2">
         <h1 class="page-header">热点内容——词云图</h1>
