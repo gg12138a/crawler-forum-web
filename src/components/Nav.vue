@@ -55,6 +55,9 @@
               <router-link to="/nav/complain/mention" @click.native="hamburger_cross">部门被投诉次数</router-link>
             </li>
             <li>
+              <router-link to="/nav/complain/status" @click.native="hamburger_cross">投诉受理情况</router-link>
+            </li>
+            <li>
               <router-link to="/nav/complain/wordCloud" @click.native="hamburger_cross">查看投诉内容词云图</router-link>
             </li>
           </ul>

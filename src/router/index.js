@@ -13,6 +13,7 @@ import WordCloud from "@/components/nav/raw/WordCloud";
 import TypeClassify from "@/components/nav/raw/TypeClassify";
 import ComplainNotice from "@/components/nav/compliants/ComplainNotice";
 import ComplainMention from "@/components/nav/compliants/ComplainMention";
+import ComplainStatus from "@/components/nav/compliants/ComplainStatus";
 
 Vue.use(VueRouter)
 
@@ -55,6 +56,7 @@ const router = new VueRouter({
                     children: [
                         {path: 'notice',component: ComplainNotice},
                         {path: 'mention',component: ComplainMention},
+                        {path: 'status',component: ComplainStatus},
                         {
                             path: 'wordCloud',
                             component: WordCloud,
@@ -78,7 +80,7 @@ router.beforeEach((to, from, next) => {
         next()
     } else {
         let accountToken = localStorage.getItem('token');
-        console.log("token为：" + accountToken);
+        // console.log("token为：" + accountToken);
         if (accountToken == null || accountToken === '') {
             alert("没有权限，请重新登录");
             return next('/login');
