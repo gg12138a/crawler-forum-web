@@ -60,6 +60,7 @@ export default {
       if (reg.test(pick_month)) {
 
         this.processing = true
+        this.imgSrc = ''
 
         this.$axios
             .get(this.requestUrl, {

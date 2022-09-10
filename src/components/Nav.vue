@@ -7,7 +7,8 @@
       <ul class="nav sidebar-nav">
 
         <li>
-          <router-link to="/nav/home" @click.native="hamburger_cross"><i class="fa fa-fw fa-home"></i> Home</router-link>
+          <router-link to="/nav/home" @click.native="hamburger_cross"><i class="fa fa-fw fa-home"></i> Home
+          </router-link>
         </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-plus"></i>
@@ -40,6 +41,21 @@
             </li>
             <li>
               <router-link to="/nav/raw/wordCloud" @click.native="hamburger_cross">查看词云图</router-link>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-plus"></i> 投诉
+            <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li>
+              <router-link to="/nav/complain/notice" @click.native="hamburger_cross">热门帖子</router-link>
+            </li>
+            <li>
+              <router-link to="/nav/complain/mention" @click.native="hamburger_cross">部门被投诉次数</router-link>
+            </li>
+            <li>
+              <router-link to="/nav/complain/wordCloud" @click.native="hamburger_cross">查看投诉内容词云图</router-link>
             </li>
           </ul>
         </li>

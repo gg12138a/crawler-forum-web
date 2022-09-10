@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: "DeptMention",
+  name: "ComplainMention",
   mounted() {
     let pie_chart = this.$echarts.init(this.$refs.chart, null, {
       width: 1200,
@@ -18,10 +18,9 @@ export default {
     })
 
     this.$axios
-        .get('http://localhost:8082/raw/mention')
+        .get('http://localhost:8082/complain/mention')
         .then(response => {
           let data = response.data.data
-          console.log(data)
           let categoryData = data.deptNameList
           let typeNameList = data.typeNameList
 

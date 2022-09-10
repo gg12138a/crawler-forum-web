@@ -20,7 +20,7 @@ export default {
         .get('http://localhost:8082/raw/typecount')
         .then(response => {
           let source = response.data
-          // console.log(source)
+          console.log(source)
 
           let option = {
             title: {
@@ -37,7 +37,7 @@ export default {
             },
             series: [
               {
-                name: '状态',
+                name: '类别',
                 type: 'pie',
                 radius: '50%',
                 data: source,

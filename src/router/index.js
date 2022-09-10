@@ -11,6 +11,8 @@ import RawSummary from "@/components/nav/raw/RawSummary";
 import DeptMention from "@/components/nav/raw/DeptMention";
 import WordCloud from "@/components/nav/raw/WordCloud";
 import TypeClassify from "@/components/nav/raw/TypeClassify";
+import ComplainNotice from "@/components/nav/compliants/ComplainNotice";
+import ComplainMention from "@/components/nav/compliants/ComplainMention";
 
 Vue.use(VueRouter)
 
@@ -45,6 +47,18 @@ const router = new VueRouter({
                             path: 'wordCloud',
                             component: WordCloud,
                             props: {requestUrl: 'http://localhost:8082/wordcloud/all'}
+                        }
+                    ]
+                },
+                {
+                    path: 'complain', component: {render: (e) => e("router-view")},
+                    children: [
+                        {path: 'notice',component: ComplainNotice},
+                        {path: 'mention',component: ComplainMention},
+                        {
+                            path: 'wordCloud',
+                            component: WordCloud,
+                            props: {requestUrl: 'http://localhost:8082/wordcloud/complain'}
                         }
                     ]
                 }
